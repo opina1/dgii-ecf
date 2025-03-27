@@ -132,11 +132,11 @@ export class SenderReceiver {
         ? new DOMParser().parseFromString(xml, 'text/xml')
         : xml;
 
-    const eNCF = xmlDoc.getElementsByTagName('eNCF')[0].textContent;
-    const TipoeCF = xmlDoc.getElementsByTagName('TipoeCF')[0].textContent;
-    const RNCEmisor = xmlDoc.getElementsByTagName('RNCEmisor')[0].textContent;
+    const eNCF = xmlDoc.getElementsByTagName('encf')[0].textContent;
+    const TipoeCF = xmlDoc.getElementsByTagName('tipoecf')[0].textContent;
+    const RNCEmisor = xmlDoc.getElementsByTagName('rncemisor')[0].textContent;
     const RNCComprador =
-      xmlDoc.getElementsByTagName('RNCComprador')[0].textContent;
+      xmlDoc.getElementsByTagName('rnccomprador')[0].textContent;
 
     if (TipoeCF && excludedEncfType.includes(TipoeCF)) {
       code = NoReceivedCode['Error de especificación']; //Document not valid
